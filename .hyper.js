@@ -96,16 +96,6 @@ module.exports = {
 
     // the shell to run when spawning a new session (i.e. /usr/local/bin/fish)
     // if left empty, your system's login shell will be used by default
-    //
-    // Windows
-    // - Make sure to use a full path if the binary name doesn't work
-    // - Remove `--login` in shellArgs
-    //
-    // Bash on Windows
-    // - Example: `C:\\Windows\\System32\\bash.exe`
-    //
-    // PowerShell on Windows
-    // - Example: `C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe`
     shell: "",
 
     // for setting shell arguments (i.e. for using interactive shellArgs: `['-i']`)
@@ -156,19 +146,15 @@ module.exports = {
 
   // a list of plugins to fetch and install from npm
   // format: [@org/]project[#version]
-  // examples:
-  //   `hyperpower`
-  //   `@company/project`
-  //   `project#1.0.1`
   plugins: [
-    "hyper-solarized-dark",
-    "hyper-pane",
-    "hypercwd",
-    "hyper-opacity",
-    "hyperminimal",
-    "hyper-tabs-autohide",
-    "hyperborder",
-    "hyper-quit",
+    "hyper-solarized-dark", // colorscheme.
+    "hyper-pane", // supports custom shortcuts for pane navigation.
+    "hypercwd", // uses current working directory for new tabs or panes.
+    "hyper-opacity", // set hyper terminal opacity.
+    "hyperminimal", // removes window header from hyper terminal.
+    "hyper-tabs-autohide", // autohides all hyper tabs from view.
+    "hyperborder", // adds traditional hyper terminal border.
+    "hyper-quit", // quit hyper when last pane exited.
     "hyper-search",
   ],
 

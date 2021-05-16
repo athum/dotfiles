@@ -46,7 +46,7 @@ Plug 'junegunn/fzf.vim' " vim specific component
 Plug 'neoclide/coc.nvim', {'branch': 'release'} " for auto-completion 
 Plug 'pangloss/vim-javascript' " for JS syntax highlighting
 Plug 'pedrohdz/vim-yaml-folds' " for yaml folding
-Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'less', 'scss', 'json', 'graphql', 'markdown', 'vue', 'html'] } " is this a formatter? what is this?
+Plug 'prettier/vim-prettier', { 'do': 'yarn install', 'for': ['javascript', 'typescript', 'css', 'scss', 'json', 'html'] } " is this a formatter? what is this?
 Plug 'scrooloose/nerdtree' " file tree
 Plug 'tpope/vim-commentary' " commenting
 Plug 'tpope/vim-fugitive' " git blame 
