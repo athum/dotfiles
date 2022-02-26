@@ -78,17 +78,24 @@ source $ZSH/oh-my-zsh.sh
 # use vim to edit shell commands
 set -o vi
 
+export EDITOR="nvim"
+export NVIMCFG='$HOME/.config/nvim/init.vim'
+
 alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
-alias shlcfg='vim ~/.zshrc'
-alias vimcfg='vim ~/.vimrc'
-alias hypcfg='vim ~/.hyper.js'
+alias shlcfg='$EDITOR $HOME/.zshrc'
+alias vimcfg='$EDITOR $HOME/.vimrc'
+alias nvimcfg='$EDITOR $HOME/.config/nvim/init.vim'
+alias hypcfg='$EDITOR $HOME/.hyper.js'
 
-alias shlsrc='source ~/.zshrc'
-alias vimsrc='source ~/.vimrc'
+alias shlsrc='source $HOME/.zshrc'
+alias vimsrc='source $HOME/.vimrc'
+alias nvimsrc='source $HOME/.config/nvim/init.vim'
 
 # GOPATH
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
+
+[ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
