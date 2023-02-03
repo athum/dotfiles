@@ -214,13 +214,16 @@ lua <<EOF
     local actions = result[1].result
     if not actions then return end
     local action = actions[1]
+	
+	-- local client_id = result[1]
+	-- local offset_encoding = vim.lsp.get_client_by_id(client_id).offset_encoding
 
     -- textDocument/codeAction can return either Command[] or CodeAction[]. If it
     -- is a CodeAction, it can have either an edit, a command or both. Edits
     -- should be executed first.
     if action.edit or type(action.command) == "table" then
       if action.edit then
-        vim.lsp.util.apply_workspace_edit(action.edit)
+        vim.lsp.util.apply_workspace_edit(action.edit, "utf-8")
       end
       if type(action.command) == "table" then
         vim.lsp.buf.execute_command(action.command)
