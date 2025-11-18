@@ -1,0 +1,21 @@
+[general]
+# git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
+import = ["~/.config/alacritty/themes/themes/everforest_dark.toml"]
+live_config_reload = true
+
+[window]
+padding = { x = 40, y = 60 }
+decorations = "Transparent"
+opacity = 0.8
+blur = true
+title = "alacritty"
+dynamic_title = false
+
+[font]
+size = 18
+
+[colors]
+transparent_background_colors = true
+
+[mouse]
+hide_when_typing = true
