@@ -1,51 +1,21 @@
-export PATH=$HOME/bin:/usr/local/bin:$PATH
+export PATH=$HOME/bin:/usr/local/bin:/Users/alice.thum/.local/bin:$PATH:/Users/alice.thum/.bin
 
-# path to your oh-my-zsh installation.
-export ZSH="/Users/${USER}/.oh-my-zsh"
+# general settings and appearance
+export ZSH="/Users/${USER}/.oh-my-zsh" # path to oh-my-zsh installation
+ZSH_THEME="sorin" # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 
-# zsh theme: https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="sorin"
+DISABLE_AUTO_TITLE="true" # disables auto-setting terminal title
+ENABLE_CORRECTION="true" # enables command auto-correction
+COMPLETION_WAITING_DOTS="true" # displays red dots when waiting for completion
+HIST_STAMPS="yyyy-mm-dd"
 
-# use case-sensitive completion
-# CASE_SENSITIVE="true"
+# updates
+DISABLE_UPDATE_PROMPT="true" # automatically update without prompting
+export UPDATE_ZSH_DAYS=7 # how often to auto-update (in days)
 
-# Uncomment the following line to use hyphen-insensitive completion.
-# Case-sensitive completion must be off. _ and - will be interchangeable.
-# HYPHEN_INSENSITIVE="true"
-
-# disable bi-weekly auto-update checks
-# DISABLE_AUTO_UPDATE="true"
-
-# automatically update without prompting
-DISABLE_UPDATE_PROMPT="true"
-
-# how often to auto-update (in days)
-export UPDATE_ZSH_DAYS=14
-
-# Uncomment the following line if pasting URLs and other text is messed up.
-# DISABLE_MAGIC_FUNCTIONS=true
-
-# Uncomment the following line to disable auto-setting terminal title.
-# DISABLE_AUTO_TITLE="true"
-
-# Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
-
-# Uncomment the following line to display red dots whilst waiting for completion.
-# COMPLETION_WAITING_DOTS="true"
-
-# Uncomment the following line if you want to disable marking untracked files
-# under VCS as dirty. This makes repository status check for large repositories
-# much, much faster.
-# DISABLE_UNTRACKED_FILES_DIRTY="true"
-
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# You can set one of the optional three formats:
-# "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-# or set a custom format using the strftime function format specifications,
-# see 'man strftime' for details.
-# HIST_STAMPS="mm/dd/yyyy"
+# Disable marking untracked files under VCS as dirty. 
+# This makes repository status check for large repositories much, much faster.
+DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 plugins=(
 	colored-man-pages
@@ -56,46 +26,49 @@ plugins=(
 
 source $ZSH/oh-my-zsh.sh
 
-# export MANPATH="/usr/local/man:$MANPATH"
-
-# You may need to manually set your language environment
-# export LANG=en_US.UTF-8
-
-# Preferred editor for local and remote sessions
-# if [[ -n $SSH_CONNECTION ]]; then
-#   export EDITOR='vim'
-# else
-#   export EDITOR='mvim'
-# fi
-
-# Compilation flags
-# export ARCHFLAGS="-arch x86_64"
-
-# alice's universal personal configuration
-# specific system/project aliases and environment variables in stored
-# in the ZSH_CUSTOM folder
-
 # use vim to edit shell commands
 set -o vi
+
+alias ex='exit'
 
 export EDITOR="nvim"
 export NVIMCFG='$HOME/.config/nvim/init.vim'
 
-alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
+# alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
 alias shlcfg='$EDITOR $HOME/.zshrc'
-alias vimcfg='$EDITOR $HOME/.vimrc'
+# alias vimcfg='$EDITOR $HOME/.vimrc'
 alias nvimcfg='$EDITOR $HOME/.config/nvim/init.vim'
-alias hypcfg='$EDITOR $HOME/.hyper.js'
+# alias hypcfg='$EDITOR $HOME/.hyper.js'
 
 alias shlsrc='source $HOME/.zshrc'
-alias vimsrc='source $HOME/.vimrc'
+# alias vimsrc='source $HOME/.vimrc'
 alias nvimsrc='source $HOME/.config/nvim/init.vim'
 
 # GOPATH
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
+# no idea what this does
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+# source /Users/alice.thum/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+fpath[1,0]=$HOME/.zsh/completion
+
+# The following lines were added by compinstall
+zstyle :compinstall filename '/Users/alice.thum/.zshrc'
+autoload -Uz compinit
+compinit 
+# End of lines added by compinstall
+
+zstyle ':completion:*' use-cache on
+zstyle ':completion:*' cache-path ~/.zsh/cache
+. /Users/alice.thum/.asdf/asdf.sh
+. /Users/alice.thum/.asdf/plugins/java/set-java-home.zsh
+
+# The following lines have been added by Docker Desktop to enable Docker CLI completions.
+fpath=(/Users/alice.thum/.docker/completions $fpath)
+autoload -Uz compinit
+compinit
+# End of Docker CLI completions
