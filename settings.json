@@ -1,290 +1,164 @@
-// VSCode settings.
 {
-    "workbench.colorTheme": "Solarized Dark",
-    "go.toolsManagement.autoUpdate": true,
-    "window.zoomLevel": 2,
-    "files.autoSave": "afterDelay",
-    "editor.formatOnPaste": true,
-    "editor.formatOnType": true,
-    "workbench.iconTheme": "vs-minimal",
-    "vim.hlsearch": true,
-    "vim.cursorStylePerMode.insert": "line",
-    "vim.cursorStylePerMode.normal": "block",
-    "vim.cursorStylePerMode.visual": "block-outline",
-    "vim.cursorStylePerMode.replace": "block-outline",
-    "vim.cursorStylePerMode.visualblock": "block-outline",
-    "vim.cursorStylePerMode.visualline": "block",
-    "vim.joinspaces": false,
-    "vim.leader": "<Space>",
-    "vim.matchpairs": "(:),{:},[:],<:>",
-    "vim.smartRelativeLine": true,
-    "editor.rulers": [
-        80
-    ],
-    "vim.normalModeKeyBindingsNonRecursive": [
-        {
-            "before": [
-                ":",
-                "w",
-                "enter"
-            ],
-            "commands": [
-                "workbench.action.files.save"
-            ]
-        },
-        // Code navigation.
-        {
-            "before": [
-                "leader",
-                "o"
-            ],
-            "commands": [
-                "editor.action.goToDeclaration"
-            ]
-        },
-        {
-            "before": [
-                "leader",
-                "u"
-            ],
-            "commands": [
-                "editor.action.goToImplementation"
-            ]
-        },
-        // TODO: Go back multiple times?
-        {
-            "before": [
-                "leader",
-                "p"
-            ],
-            "commands": [
-                "workbench.action.navigateBack"
-            ]
-        },
-        {
-            "before": [
-                "leader",
-                "b",
-                "b"
-            ],
-            "commands": [
-                "editor.action.goToReferences"
-            ]
-        },
-        {
-            "before": [
-                "K",
-            ],
-            "commands": [
-                "editor.action.showDefinitionPreviewHover"
-            ]
-        },
-        {
-            "before": [
-                "g",
-                "c",
-                "c"
-            ],
-            "commands": [
-                "editor.action.commentLine"
-            ]
-        },
-        {
-            "before": [
-                "(",
-                "d"
-            ],
-            "commands": [
-                "editor.action.marker.nextInFiles"
-            ],
-            "silent": true
-        },
-        {
-            "before": [
-                ")",
-                "d"
-            ],
-            "commands": [
-                "editor.action.marker.prevInFiles"
-            ],
-            "silent": true
-        },
-        // Git commands.
-        {
-            "before": [
-                "leader",
-                "g",
-                "a"
-            ],
-            "commands": [
-                "git.stage"
-            ]
-        },
-        {
-            "before": [
-                "leader",
-                "g",
-                "r",
-                "s"
-            ],
-            "commands": [
-                "git.unstage"
-            ]
-        },
-        // Navigating and closing buffers.
-        {
-            "before": [
-                "leader",
-                "l"
-            ],
-            "commands": [
-                ":bnext"
-            ]
-        },
-        {
-            "before": [
-                "leader",
-                "h"
-            ],
-            "commands": [
-                ":bprevious"
-            ]
-        },
-        {
-            "before": [
-                "leader",
-                "q"
-            ],
-            "commands": [
-                ":bd",
-            ]
-        },
-        // Navigating between and splitting panes.
-        {
-            "before": [
-                "leader",
-                "a"
-            ],
-            "commands": [
-                "workbench.action.focusLeftGroup"
-            ]
-        },
-        {
-            "before": [
-                "leader",
-                "s"
-            ],
-            "commands": [
-                "workbench.action.focusBelowGroup"
-            ]
-        },
-        {
-            "before": [
-                "leader",
-                "w"
-            ],
-            "commands": [
-                "workbench.action.focusAboveGroup"
-            ]
-        },
-        {
-            "before": [
-                "leader",
-                "d"
-            ],
-            "commands": [
-                "workbench.action.focusRightGroup"
-            ]
-        },
-        {
-            "before": [
-                "leader",
-                "v"
-            ],
-            "commands": [
-                "workbench.action.splitEditorRight"
-            ]
-        },
-        {
-            "before": [
-                "leader",
-                "s",
-                "p"
-            ],
-            "commands": [
-                "workbench.action.splitEditorDown"
-            ]
-        },
-        {
-            "before": [
-                "leader",
-                "w",
-                "w"
-            ],
-            "commands": [
-                "workbench.action.closeEditorsInGroup"
-            ]
-        },
-        // Close the terminal by typing ex.
-        {
-            "before": [
-                "leader",
-                "u"
-            ],
-            "commands": [
-                "workbench.action.terminal.new"
-            ]
-        },
-        // Opening files and searching.
-        {
-            "before": [
-                "leader",
-                "f"
-            ],
-            "commands": [
-                "workbench.action.quickOpen"
-            ]
-        },
-        {
-            "before": [
-                "leader",
-                "r"
-            ],
-            "commands": [
-                "workbench.action.findInFiles"
-            ]
-        },
-    ],
-    "vim.visualModeKeyBindings": [
-        // TODO: how do I exit visual mode after this?
-        {
-            "before": [
-                "m",
-                "m"
-            ],
-            "commands": [
-                "editor.action.clipboardCopyAction",
-                "escape"
-            ]
-        },
-        {
-            "before": [
-                "g",
-                "c"
-            ],
-            "commands": [
-                "editor.action.commentLine"
-            ]
-        }
-    ],
-    "java.compile.nullAnalysis.mode": "automatic",
-    "editor.minimap.enabled": false,
-    "workbench.editor.empty.hint": "hidden",
-    "workbench.startupEditor": "newUntitledFile",
-    "editor.wordWrap": "on",
-    "editor.formatOnSave": true,
-    "terminal.integrated.enableMultiLinePasteWarning": false,
-    "vim.insertModeKeyBindingsNonRecursive": [
-        
-    ]
+	"workbench.colorTheme": "Everforest Dark",
+	"go.toolsManagement.autoUpdate": true,
+	"window.zoomLevel": 2,
+	"files.autoSave": "afterDelay",
+	"editor.formatOnPaste": true,
+	"editor.formatOnType": true,
+	"workbench.iconTheme": "vs-minimal",
+	"vim.hlsearch": true,
+	"vim.cursorStylePerMode.insert": "line",
+	"vim.cursorStylePerMode.normal": "block",
+	"vim.cursorStylePerMode.visual": "block-outline",
+	"vim.cursorStylePerMode.replace": "block-outline",
+	"vim.cursorStylePerMode.visualblock": "block-outline",
+	"vim.cursorStylePerMode.visualline": "block",
+	"vim.joinspaces": false,
+	"vim.leader": "<Space>",
+	"vim.matchpairs": "(:),{:},[:],<:>",
+	"vim.smartRelativeLine": true,
+	"editor.rulers": [80],
+	"vim.normalModeKeyBindingsNonRecursive": [
+		{
+			"before": [":", "w", "enter"],
+			"commands": ["workbench.action.files.save"]
+		},
+		// Code navigation.
+		{
+			"before": ["leader", "o"],
+			"commands": ["editor.action.goToDeclaration"]
+		},
+		{
+			"before": ["leader", "u"],
+			"commands": ["editor.action.goToImplementation"]
+		},
+		{
+			"before": ["leader", "p"],
+			"commands": ["workbench.action.navigateBack"]
+		},
+		{
+			"before": ["leader", "b", "b"],
+			"commands": ["editor.action.goToReferences"]
+		},
+		{
+			"before": ["K"],
+			"commands": ["editor.action.showDefinitionPreviewHover"]
+		},
+		{
+			"before": ["g", "c", "c"],
+			"commands": ["editor.action.commentLine"]
+		},
+		{
+			"before": ["(", "d"],
+			"commands": ["editor.action.marker.nextInFiles"],
+			"silent": true
+		},
+		{
+			"before": [")", "d"],
+			"commands": ["editor.action.marker.prevInFiles"],
+			"silent": true
+		},
+		// Git commands.
+		{
+			"before": ["leader", "g", "a"],
+			"commands": ["git.stage"]
+		},
+		{
+			"before": ["leader", "g", "r", "s"],
+			"commands": ["git.unstage"]
+		},
+		// Navigating and closing buffers.
+		{
+			"before": ["leader", "l"],
+			"commands": [":bnext"]
+		},
+		{
+			"before": ["leader", "h"],
+			"commands": [":bprevious"]
+		},
+		{
+			"before": ["leader", "q"],
+			"commands": [":bd"]
+		},
+		// Navigating between and splitting panes.
+		{
+			"before": ["leader", "a"],
+			"commands": ["workbench.action.focusLeftGroup"]
+		},
+		{
+			"before": ["leader", "s"],
+			"commands": ["workbench.action.focusBelowGroup"]
+		},
+		{
+			"before": ["leader", "w"],
+			"commands": ["workbench.action.focusAboveGroup"]
+		},
+		{
+			"before": ["leader", "d"],
+			"commands": ["workbench.action.focusRightGroup"]
+		},
+		{
+			"before": ["leader", "v"],
+			"commands": ["workbench.action.splitEditorRight"]
+		},
+		{
+			"before": ["leader", "s", "p"],
+			"commands": ["workbench.action.splitEditorDown"]
+		},
+		{
+			"before": ["leader", "w", "w"],
+			"commands": ["workbench.action.closeEditorsInGroup"]
+		},
+		{
+			"before": ["leader", "u"],
+			"commands": ["workbench.action.terminal.new"]
+		},
+		// Opening files and searching.
+		{
+			"before": ["leader", "f"],
+			"commands": ["workbench.action.quickOpen"]
+		},
+		{
+			"before": ["leader", "r"],
+			"commands": ["workbench.action.findInFiles"]
+		}
+	],
+	"vim.visualModeKeyBindings": [
+		{
+			"before": ["m", "m"],
+			"commands": ["editor.action.clipboardCopyAction", "escape"]
+		},
+		{
+			"before": ["g", "c"],
+			"commands": ["editor.action.commentLine"]
+		}
+	],
+	"java.compile.nullAnalysis.mode": "automatic",
+	"editor.minimap.enabled": false,
+	"workbench.editor.empty.hint": "hidden",
+	"workbench.startupEditor": "newUntitledFile",
+	"editor.wordWrap": "on",
+	"terminal.integrated.enableMultiLinePasteWarning": "never",
+	"vim.insertModeKeyBindingsNonRecursive": [],
+	"cue.lintOnSave": "off",
+	"cue.formatTool": "cue fmt",
+	"gitlens.advanced.messages": {
+		"suppressIntegrationRequestTimedOutWarning": true
+	},
+	"editor.formatOnSave": true,
+	"prettier.useTabs": true,
+	"[javascript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[javascriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "esbenp.prettier-vscode"
+	},
+	"github.copilot.nextEditSuggestions.enabled": true,
+	"git.openRepositoryInParentFolders": "never"
 }
