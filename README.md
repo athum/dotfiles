@@ -3,6 +3,16 @@
 ## Configuring zsh
 ## Configuring Github
 ## Configuring Alacritty
+Download the latest release [here](https://github.com/alacritty/alacritty/releases).
+
+Copy over the TOML configuration file from Github, and download themes:
+```
+mkdir -p ~/.config/alacritty/
+touch mkdir -p ~/.config/alacritty/alacritty.toml
+
+mkdir -p ~/.config/alacritty/themes
+git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/theme
+```
 ## Configuring tmux
 ### Reference
 #### Session Management
