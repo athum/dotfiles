@@ -50,22 +50,3 @@ export PATH=$PATH:$GOPATH/bin
 # fzf
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-
-fpath[1,0]=$HOME/.zsh/completion
-
-# The following lines were added by compinstall
-zstyle :compinstall filename '/Users/alice.thum/.zshrc'
-autoload -Uz compinit
-compinit 
-# End of lines added by compinstall
-
-zstyle ':completion:*' use-cache on
-zstyle ':completion:*' cache-path ~/.zsh/cache
-# . /Users/alice.thum/.asdf/asdf.sh
-# . /Users/alice.thum/.asdf/plugins/java/set-java-home.zsh
-
-# The following lines have been added by Docker Desktop to enable Docker CLI completions.
-fpath=(/Users/alice.thum/.docker/completions $fpath)
-autoload -Uz compinit
-compinit
-# End of Docker CLI completions
