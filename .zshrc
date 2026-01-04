@@ -17,6 +17,9 @@ export UPDATE_ZSH_DAYS=7 # how often to auto-update (in days)
 # This makes repository status check for large repositories much, much faster.
 DISABLE_UNTRACKED_FILES_DIRTY="true"
 
+# zsh-syntax-highlighting installed by homebrew
+source /opt/homebrew/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
 plugins=(
 	colored-man-pages
 	git
@@ -29,11 +32,10 @@ source $ZSH/oh-my-zsh.sh
 # use vim to edit shell commands
 set -o vi
 
-alias ex='exit'
+alias x='exit'
 
 export EDITOR="nvim"
 export NVIMCFG='$HOME/.config/nvim/init.vim'
-
 
 alias zshcfg='$EDITOR $HOME/.zshrc'
 alias nvimcfg='$EDITOR $HOME/.config/nvim/init.vim'
@@ -45,6 +47,7 @@ alias nvimsrc='source $HOME/.config/nvim/init.vim'
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
+# fzf
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
