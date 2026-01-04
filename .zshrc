@@ -24,7 +24,6 @@ plugins=(
 	colored-man-pages
 	git
 	history
-	zsh-syntax-highlighting
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -32,8 +31,7 @@ source $ZSH/oh-my-zsh.sh
 # use vim to edit shell commands
 set -o vi
 
-alias x='exit'
-
+# neovim
 export EDITOR="nvim"
 export NVIMCFG='$HOME/.config/nvim/init.vim'
 
