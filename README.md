@@ -21,6 +21,14 @@ touch mkdir -p ~/.config/alacritty/alacritty.toml
 mkdir -p ~/.config/alacritty/themes
 git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/theme
 ```
+
+## Configuring Golang
+## Configuring VSCode
+1. Download VSCode [here](https://code.visualstudio.com/)
+2. Install color schem, Vim plugin, and any other language-related plugins.
+3. Copy over `keybindings.json`.
+4. Copy over `settings.json`.
+
 ## Configuring tmux
 ### Reference
 #### Session Management
@@ -57,6 +65,5 @@ Ctrl + b ?
 :kill-server
 ```
 
-## Configuring Golang
-## Configuring VSCode
+
 
