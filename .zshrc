@@ -37,12 +37,6 @@ alias x='exit'
 export EDITOR="nvim"
 export NVIMCFG='$HOME/.config/nvim/init.vim'
 
-alias zshcfg='$EDITOR $HOME/.zshrc'
-alias nvimcfg='$EDITOR $HOME/.config/nvim/init.vim'
-
-alias zshsrc='source $HOME/.zshrc'
-alias nvimsrc='source $HOME/.config/nvim/init.vim'
-
 # GOPATH
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
