@@ -34,25 +34,19 @@ alias ex='exit'
 export EDITOR="nvim"
 export NVIMCFG='$HOME/.config/nvim/init.vim'
 
-# alias config='/usr/bin/git --git-dir=$HOME/.cfg/ --work-tree=$HOME'
 
-alias shlcfg='$EDITOR $HOME/.zshrc'
-# alias vimcfg='$EDITOR $HOME/.vimrc'
+alias zshcfg='$EDITOR $HOME/.zshrc'
 alias nvimcfg='$EDITOR $HOME/.config/nvim/init.vim'
-# alias hypcfg='$EDITOR $HOME/.hyper.js'
 
-alias shlsrc='source $HOME/.zshrc'
-# alias vimsrc='source $HOME/.vimrc'
+alias zshsrc='source $HOME/.zshrc'
 alias nvimsrc='source $HOME/.config/nvim/init.vim'
 
 # GOPATH
 export GOPATH=$HOME/go
 export PATH=$PATH:$GOPATH/bin
 
-# no idea what this does
 [ -f $HOME/.fzf.zsh ] && source $HOME/.fzf.zsh
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
-# source /Users/alice.thum/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 fpath[1,0]=$HOME/.zsh/completion
 
@@ -64,8 +58,8 @@ compinit
 
 zstyle ':completion:*' use-cache on
 zstyle ':completion:*' cache-path ~/.zsh/cache
-. /Users/alice.thum/.asdf/asdf.sh
-. /Users/alice.thum/.asdf/plugins/java/set-java-home.zsh
+# . /Users/alice.thum/.asdf/asdf.sh
+# . /Users/alice.thum/.asdf/plugins/java/set-java-home.zsh
 
 # The following lines have been added by Docker Desktop to enable Docker CLI completions.
 fpath=(/Users/alice.thum/.docker/completions $fpath)
