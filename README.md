@@ -3,11 +3,11 @@
 ## Configuring zsh
 1. Download Xcode from the App Store and `homebrew` [here](https://brew.sh/).
 2. Install `oh-my-zsh` [here](https://ohmyz.sh/), and copy over the `.zshrc` configuration. 
-3. Install `zsh-syntax-highlighting` [here](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md).
+3. Install `zsh-syntax-highlighting` [here](https://github.com/zsh-users/zsh-syntax-highlighting/blob/master/INSTALL.md) using `homebrew`.
 4. Install `fzf` [here](https://github.com/junegunn/fzf?tab=readme-ov-file#using-homebrew).
 
 ## Configuring neovim
-Install `neovim` [here](https://neovim.io/doc2/install/) using `homebrew`. Then install `junegunn/vim-plug` [here](https://github.com/junegunn/vim-plug?tab=readme-ov-file#neovim) and run `:PlugInstall`.
+Install `neovim` [here](https://neovim.io/doc2/install/) using `homebrew`. Copy over the configuration file. Then install `junegunn/vim-plug` [here](https://github.com/junegunn/vim-plug?tab=readme-ov-file#neovim) and run `:PlugInstall`.
 
 ## Configuring Github
 ## Configuring Alacritty
