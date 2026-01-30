@@ -5,7 +5,7 @@ export ZSH="/Users/${USER}/.oh-my-zsh" # path to oh-my-zsh installation
 ZSH_THEME="sorin" # https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
 
 DISABLE_AUTO_TITLE="true" # disables auto-setting terminal title
-ENABLE_CORRECTION="true" # enables command auto-correction
+DISABLE_CORRECTION="true" # disable auto-corrections suggestions
 COMPLETION_WAITING_DOTS="true" # displays red dots when waiting for completion
 HIST_STAMPS="yyyy-mm-dd"
 
