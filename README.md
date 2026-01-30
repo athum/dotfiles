@@ -42,6 +42,8 @@ tmux attach -t[session-name] # Attaches to an existing specified session
 Ctrl + b d # detach
 ```
 #### Window and pane management
+
+These are default settings, but replaced with `Cmd + b` in my custom configuration.
 ```
 Ctrl + b c # Create new window
 :neww -dn[window-name] # Create new window with a specific name
@@ -51,8 +53,8 @@ Ctrl + b n # goes to next window in list by number
 Ctrl + b p # goes to previous window in list by number
 Ctrl + b l # goes to last window
 
-Ctrl + b % # splits current pane horizontally
-Ctrl + b " splits current pane vertically
+Ctrl + b % # splits current pane vertically
+Ctrl + b " # splits current pane horizontally
 
 Ctrl + b [up|down|left|right] # changes to specified pane
 ```
