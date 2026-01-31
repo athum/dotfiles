@@ -67,5 +67,63 @@ Ctrl + b ?
 :kill-server
 ```
 
+## Configuring Obsidian
+### General
+Download Obsidian and enable Vim key bindings and "Show line numbers" in the "Editor" section of settings. Configure the following hotkeys:
+```
+Focus on tab group above: option+w
+Focus on tab group below: option+s
+Focus on tab group left: option+a
+Focus on tab group right: option+d
+
+Go to next tab: cmd+shift+]
+Go to previous tab: cmd+shift+[
+
+Split down: cmd+shift+s
+Split right: cmd+shift+v
+
+Insert template: cmd+shift+i
+
+Toggle left sidebar: cmd+shift+b
+```
+
+### Apearance
+Download and enable the following two community plugins:
+- Relative line numbers
+- Style settings
+
+Download and enable the `AnuPpuccin` [theme](https://github.com/AnubisNekhet/AnuPpuccin). Then download the [extended color schemes snippet](https://github.com/AnubisNekhet/AnuPpuccin/blob/main/snippets/extended-colorschemes.css) and move it into the `.obsidian/snippets` directory:
+```
+mkdir -p .obsidian/snippets
+mv ~/Downloads/extended-colorschemes.css .obsidian/snippets/extended-colorschemes.css
+```
+
+Once that's done, enable the CSS snippet in the "Appearance" section of settings. Go to the "Style Settings" plugin section and import the following configuration:
+```
+{
+  "anuppuccin-theme-settings@@anuppuccin-light-theme-accents": "ctp-accent-light-rosewater",
+  "anuppuccin-theme-settings@@anp-active-line": "anp-current-line",
+  "anuppuccin-theme-settings-extended@@catppuccin-theme-dark-extended": "ctp-everforest-dark",
+  "anuppuccin-theme-settings-extended@@catppuccin-theme-extended": "ctp-solarized-light",
+  "anuppuccin-theme-settings-extended@@anp-theme-ext-dark": true,
+  "anuppuccin-theme-settings-extended@@anp-theme-ext-light": true,
+  "anuppuccin-theme-settings@@anuppuccin-theme-accents": "ctp-accent-teal",
+  "anuppuccin-theme-settings@@anp-header-color-toggle": true,
+  "anuppuccin-theme-settings@@anp-colorful-frame": false,
+  "anuppuccin-theme-settings@@anp-alt-tab-style": "anp-mini-tab-toggle",
+  "anuppuccin-theme-settings@@anp-translucency-opacity": 0.3,
+  "anuppuccin-theme-settings@@anp-colorful-frame-icon-toggle-dark": false,
+  "anuppuccin-theme-settings@@anp-colorful-frame-icon-toggle-light": false,
+  "anuppuccin-theme-settings@@anp-colorful-frame-opacity": 0.6,
+  "anuppuccin-theme-settings@@anp-color-transition-toggle": true,
+  "anuppuccin-theme-settings@@anp-layout-select": "anp-card-layout",
+  "anuppuccin-theme-settings@@callout-title-opacity": 0.5,
+  "anuppuccin-theme-settings@@anp-kanban-card-opacity": 0.5,
+  "anuppuccin-theme-settings@@anp-kanban-lane-opacity": 0.5,
+  "anuppuccin-theme-settings@@anp-rainbow-folder-bg-opacity": 0.5
+}
+```
+
+
 
 
