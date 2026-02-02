@@ -84,6 +84,7 @@ Split right: cmd+shift+v
 
 Insert template: cmd+shift+i
 
+Navigate back: cmd+shift+h
 Toggle left sidebar: cmd+shift+b
 ```
 
