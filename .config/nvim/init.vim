@@ -43,7 +43,7 @@ nnoremap <leader>ww <C-w>x
 
 " ---------- >^.^< plugins >^.^< ----------
 
-call plug#begin('$HOME/.config/nvim/plugged')
+call plug#begin('~/.config/nvim')
 
 Plug 'airblade/vim-gitgutter' " shows git changes
 Plug 'junegunn/fzf', { 'dir': '~/.fzf', 'do': './install --all' } " for looking for files
@@ -101,9 +101,10 @@ let g:airline_theme='deus' " pretty colors
 
 " ---------- colorscheme ----------
 
-"set termguicolors
-"colorscheme solarized8
-"set background dark
+set termguicolors
+set background=dark
+let g:everforest_background = 'medium'
+let g:everforest_transparent_background = 1
 colorscheme everforest
 
 " ---------- aesthetics ----------
