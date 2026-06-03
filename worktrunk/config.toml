@@ -1,0 +1,12 @@
+skip-commit-generation-prompt = true
+[post-start]
+vscode = "code --add {{ worktree_path }}"
+git-spice = "git-spice branch track {{ branch }} --base {{ default_branch }}"
+
+[pre-remove]
+vscode = "code --remove {{ worktree_path }}"
+
+[post-remove]
+git-spice = "git-spice repo sync"
+
+[projects]
