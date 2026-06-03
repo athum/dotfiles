@@ -18,6 +18,9 @@
 Copy over the `ghostty` configuration to `~/.config/ghostty/config`.
 Copy over the `cmux` configuration to `~/.config/cmux/cmux.json`.
 
+## Configuring worktrunk
+Copy over the `worktrunk` configuration to `~/.config/worktrunk/config.toml`.
+
 ## Configuring Github
 
 ## Configuring VSCode
