@@ -1,7 +1,9 @@
 skip-commit-generation-prompt = true
+
 [post-start]
 vscode = "code --add {{ worktree_path }}"
 git-spice = "git-spice branch track {{ branch }} --base {{ default_branch }}"
+github-desktop = "github {{ worktree_path }}"
 
 [pre-remove]
 vscode = "code --remove {{ worktree_path }}"
