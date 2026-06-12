@@ -10,9 +10,9 @@
 4. Install `fzf` [here](https://github.com/junegunn/fzf?tab=readme-ov-file#using-homebrew).
 
 ## Configuring neovim
-1. Install `neovim` [here](https://neovim.io/doc2/install/) using `homebrew`.
+1. Install `neovim` [here](https://neovim.io/doc/install/) using `homebrew`.
 2. Copy over the configuration file to `~/.config/nvim/init.vim`.
-3. Then install `junegunn/vim-plug` [here](https://github.com/junegunn/vim-plug?tab=readme-ov-file#neovim) and run `:PlugInstall`.
+3. Then install `junegunn/vim-plug` [here](https://github.com/junegunn/vim-plug?tab=readme-ov-file#neovim) and run `:PlugInstall` after using `nvim` to open the configuration file.
 
 ## Configuring ghostty
 Copy over the `ghostty` configuration to `~/.config/ghostty/config`.
