@@ -38,7 +38,7 @@ git config --global gpg.ssh.allowedSignersFile ~/.ssh/allowed_signers
 ```
 After committing, verify via:
 ```
-
+git verify-commit [commit]
 ```
 
 ## Configuring VSCode
