@@ -22,6 +22,24 @@ Copy over the `cmux` configuration to `~/.config/cmux/cmux.json`.
 Copy over the `worktrunk` configuration to `~/.config/worktrunk/config.toml`.
 
 ## Configuring Github
+Follow [these](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent#generating-a-new-ssh-key) instructions for generating a new SSH key and adding it to the `ssh-agent`. Add the same SSH key to Github twice, once as an authentication key and once as a signing key.
+
+Create ~/.ssh/allowed_signers with this content:
+```
+[your-email] ssh-ed25519 AAAAC3... (your public key)
+```
+Then run the following:
+```
+git config --global gpg.format ssh
+git config --global user.signingkey /PATH/TO/.SSH/KEY.PUB
+
+git config --global commit.gpgsign true
+git config --global gpg.ssh.allowedSignersFile ~/.ssh/allowed_signers
+```
+After committing, verify via:
+```
+
+```
 
 ## Configuring VSCode
 1. Download VSCode [here](https://code.visualstudio.com/)
